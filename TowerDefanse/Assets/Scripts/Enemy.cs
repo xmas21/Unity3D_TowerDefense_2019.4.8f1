@@ -1,18 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("移動速度"), Range(0.1f, 10)]
+    public float speed = 1;
+    [Header("血量"), Range(100, 600)]
+    public float hp = 200;
+    [Header("金錢"), Range(10, 100)]
+    public int coin = 20;
+
+    private NavMeshAgent nav;
+    private Animator ani;
+    private Transform EndPoint;
+
+    private void Awake()
     {
-        
+        nav = GetComponent<NavMeshAgent>();
+        ani = GetComponent<Animator>();
+        nav.speed = speed;
+
+        EndPoint = GameObject.Find("終點").transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        Move();
     }
+
+    private void Move()
+    {
+        nav.SetDestination(EndPoint.position);
+        ani.SetFloat("移動", nav.velocity.magnitude);
+    }
+
 }
