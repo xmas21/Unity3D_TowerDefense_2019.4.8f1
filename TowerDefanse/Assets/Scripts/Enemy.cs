@@ -4,7 +4,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     [Header("移動速度"), Range(0.1f, 10)]
-    public float speed = 1;
+    public float speed = 2;
     [Header("血量"), Range(100, 600)]
     public float hp = 200;
     [Header("金錢"), Range(10, 100)]
