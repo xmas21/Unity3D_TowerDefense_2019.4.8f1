@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: -2584876208744379744}
   - component: {fileID: 7128875944416717505}
   - component: {fileID: 7911063175363258084}
+  - component: {fileID: 5375620725147656954}
   m_Layer: 0
   m_Name: "\u5C0F\u6A5F\u68B0\u98DB\u8239"
   m_TagString: "\u602A\u7269"
@@ -444,7 +445,7 @@ Animator:
   m_GameObject: {fileID: 468746058466501806}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e29c4d0ebf15a494eb9362094b78ab44, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -505,3 +506,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5375620725147656954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468746058466501806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453ece744d19dfc468cb246dae0ff391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  hp: 200
+  coin: 20

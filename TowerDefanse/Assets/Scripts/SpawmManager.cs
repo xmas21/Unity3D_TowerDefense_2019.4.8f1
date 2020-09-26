@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class SpawmManager : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class SpawmManager : MonoBehaviour
     private float timer;
     private int count;
 
+    public List<Enemy> enemys = new List<Enemy>();
+    public List<float> distances = new List<float>();
+
     private void Start()
     {
         InvokeRepeating("Spawn", 0, cd);
@@ -27,7 +31,9 @@ public class SpawmManager : MonoBehaviour
 
         int r = Random.Range(0, enemy.Length);
 
-        Instantiate(enemy[r]);
+        Transform temp = Instantiate(enemy[r]);
 
+        enemys.Add(temp.GetComponent<Enemy>());
+        distances.Add(0);
     }
 }
