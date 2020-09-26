@@ -6,9 +6,9 @@ public class EndPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Collision.gameObject.tag == "怪物")
+        if (other.gameObject.tag == "怪物")
         {
-            DestoryEnemy(Collision.gameObject);
+            DestoryEnemy(other.gameObject);
         }
     }
 

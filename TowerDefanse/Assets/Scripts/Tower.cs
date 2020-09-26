@@ -16,8 +16,8 @@ public class Tower : MonoBehaviour
 
     private void Attack()
     {
-        Quaternion look = Quaternion.LookRotation(Enemy.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, look, Time.deltaTime * turn);
+        //Quaternion look = Quaternion.LookRotation(Enemy.position - transform.position);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, look, Time.deltaTime * turn);
 
         timer += Time.deltaTime;
 

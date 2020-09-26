@@ -13,6 +13,7 @@ public class SpawmManager : MonoBehaviour
 
     private void Spawn()
     {
-        Instantiate(enemy);
+        int r = Random.Range(0, enemy.Length);
+        Instantiate(enemy[r]);
     }
 }
