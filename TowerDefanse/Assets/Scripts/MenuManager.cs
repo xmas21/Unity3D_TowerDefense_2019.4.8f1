@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+#region
 public class MenuManager : MonoBehaviour
 {
     [Header("載入畫面")]
@@ -16,6 +17,7 @@ public class MenuManager : MonoBehaviour
     [Header("載入場景名稱")]
     public string nameScene = "遊戲畫面";
 
+    #endregion
 
 
     public void Quit()
@@ -28,8 +30,7 @@ public class MenuManager : MonoBehaviour
         StartCoroutine(Loading());
     }
 
-
-    public IEnumerator Loading()
+    public IEnumerator Loading()  //載入畫面
     {
         panelloading.SetActive(true);
         AsyncOperation ao = SceneManager.LoadSceneAsync(nameScene);

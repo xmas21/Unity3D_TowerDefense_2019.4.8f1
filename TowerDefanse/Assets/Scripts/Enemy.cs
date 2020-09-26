@@ -10,12 +10,14 @@ public class Enemy : MonoBehaviour
     [Header("金錢"), Range(10, 100)]
     public int coin = 20;
 
+    private Rigidbody rig;
     private NavMeshAgent nav;
     private Animator ani;
     private Transform EndPoint;
 
     private void Awake()
     {
+        rig = GetComponent<Rigidbody>();
         nav = GetComponent<NavMeshAgent>();
         ani = GetComponent<Animator>();
         nav.speed = speed;

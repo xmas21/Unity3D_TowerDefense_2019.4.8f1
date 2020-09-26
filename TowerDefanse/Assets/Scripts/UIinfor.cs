@@ -17,7 +17,11 @@ public class UIinfor : MonoBehaviour
     private int damage = 1;
     public int Hp = 5;
 
-
+    public void LastHp()
+    {
+        Hp -= Hp;
+        lasthp.text = "剩餘血量 : " + Hp;
+    }
 
     private void OnTriggerEnter(Collider other)
     {

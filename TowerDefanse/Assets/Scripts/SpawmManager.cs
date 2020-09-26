@@ -11,12 +11,8 @@ public class SpawmManager : MonoBehaviour
     [Header("生成數量"), Range(10, 100)]
     public int spawnNumber = 10;
 
-    private void Start()
-    {
-
-    }
-
     private void Spawn()
     {
+        Instantiate(enemy);
     }
 }
