@@ -91,8 +91,9 @@ public class Tower : MonoBehaviour
                 ParticleSystem[] ps = GetComponentsInChildren<ParticleSystem>();
                 for (int i = 0; i < ps.Length; i++) ps[i].Play();
 
-                Transform temp = Instantiate(bullet, bulletPoint.position, Quaternion.identity);
-                temp.GetComponent<Rigidbody>().AddForce(transform.forward * speed);
+                Vector3 shootPoint = new Vector3(bulletPoint.position.x, bulletPoint.position.y - 2, bulletPoint.position.z);
+                Transform temp = Instantiate(bullet, shootPoint, Quaternion.identity);
+                temp.GetComponent<Rigidbody>().AddForce(transform.forward * speed * 6);
             }
         }
 

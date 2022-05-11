@@ -36,4 +36,19 @@ public class Enemy : MonoBehaviour
         ani.SetFloat("移動", nav.velocity.magnitude);
     }
 
+    //public void Hurt(int damage)
+    //{
+    //    hp -= damage;
+
+    //    if (hp <= 0)
+    //    {
+    //        Die();
+    //    }
+    //}
+
+    //void Die()
+    //{
+    //    Destroy(gameObject, 1.5f);
+    //}
+
 }
